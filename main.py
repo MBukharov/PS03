@@ -35,12 +35,15 @@ def game():
         word_data = translate_word(get_word())
         word = word_data.get("word")
         definition = word_data.get("word_definition")
+
         print(f"\nЗначение слова - {definition}")
         user = input("Что это за слово?\n")
+
         if user == word:
             print("Верно!")
         else:
             print(f"Ответ неверный, было загадано это слово - {word}")
+
         play_again = input("Хотите сыграть еще раз? да/нет\n")
         if play_again != "да":
             print("Спасибо за игру!")
